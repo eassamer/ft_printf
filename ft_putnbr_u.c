@@ -1,10 +1,17 @@
-#include<unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/16 18:06:25 by eassamer          #+#    #+#             */
+/*   Updated: 2021/11/16 18:07:09 by eassamer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include"ft_printf.h"
 
-static void ft_putchar(char c)
-{
-	write(1,&c,1);
-}
 void	ft_putnbr_u(unsigned int n)
 {
 	unsigned long	i;

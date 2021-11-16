@@ -6,17 +6,11 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:16:34 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/16 14:30:04 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:12:24 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-void ft_putchar(char c);
-void	ft_putnbr(int n);
-void	ft_putstr(char *str);
-void	ft_putnbr_u(unsigned int n);
-
+#include"ft_printf.h"
 
 void	write_f(char format, const void *v)
 {
@@ -30,6 +24,10 @@ void	write_f(char format, const void *v)
 		ft_putnbr_u((unsigned int)v);
 	else if (format == '%')
 		ft_putchar('%');
+	else if (format == 'x')
+		ft_print_hexa((int)v);
+	else if (format == 'X')
+		ft_print_hexa_u((int)v);
 }
 int	ft_printf(const char *s, ...)
 {
@@ -48,7 +46,7 @@ int	ft_printf(const char *s, ...)
 			write_f(s[i], next);
 		}
 		else
-			printf("%c", s[i]);
+			ft_putchar(s[i]);
 		i++;
 	}
 	va_end(ap);
@@ -57,5 +55,5 @@ int	ft_printf(const char *s, ...)
 
 int main()
 {
-	ft_printf("%d",88);
+	ft_printf("hello %Xworld",999);
 }
