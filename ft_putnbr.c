@@ -6,13 +6,28 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:39 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/16 18:07:17 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/17 13:50:03 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
-
-void	ft_putnbr(int n)
+static int ft_len(int n)
+{
+	int len;
+	len = 0;
+	if (n < 0)
+	{
+		len++;
+		n *= -1;
+	}
+	while (n)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+int	ft_putnbr(int n)
 {
 	long	i;
 
@@ -31,4 +46,5 @@ void	ft_putnbr(int n)
 		ft_putnbr((i / 10));
 		ft_putnbr((i % 10));
 	}
+	return (ft_len(n));
 }

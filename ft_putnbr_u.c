@@ -6,13 +6,25 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:25 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/16 18:07:09 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/17 13:49:58 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
+static int ft_len(int n)
+{
+	int len;
+	
+	len = 0;
+	while (n)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
 
-void	ft_putnbr_u(unsigned int n)
+int	ft_putnbr_u(unsigned int n)
 {
 	unsigned long	i;
 
@@ -31,4 +43,5 @@ void	ft_putnbr_u(unsigned int n)
 		ft_putnbr_u((i / 10));
 		ft_putnbr_u((i % 10));
 	}
+	return (ft_len(n));
 }

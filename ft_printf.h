@@ -2,13 +2,16 @@
 #define FT_PRINTF_H
 
 # include <unistd.h>
+#include<stdlib.h>
 # include <stdarg.h>
 
-void    ft_print_hexa(int hexa);
-void ft_putchar(char c);
-void	ft_putnbr_u(unsigned int n);
-void	ft_putnbr(int n);
-void	ft_putstr(char *str);
-void    ft_print_hexa_u(int hexa);
+int ft_print_hexa(int hexa);
+int	ft_putchar(char c);
+int	ft_putnbr_u(unsigned int n);
+int	ft_putnbr(int n);
+int	ft_putstr(char *str);
+int    ft_print_hexa_u(int hexa);
+int	ft_printf(const char *s, ...);
+int	write_f(char format, const void *v, int *len);
 
 #endif
