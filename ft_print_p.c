@@ -1,45 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*   ft_print_p.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 18:06:25 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/18 08:45:59 by eassamer         ###   ########.fr       */
+/*   Created: 2021/11/19 17:10:06 by eassamer          #+#    #+#             */
+/*   Updated: 2021/11/19 21:45:59 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-static int ft_len(unsigned int n)
+int	ft_print_p(unsigned long int p)
 {
-	int len;
 	
-	len = 0;
-	if (!n)
-		return(1);
-	while (n)
-	{
-		len++;
-		n = n / 10;
-	}
-	return (len);
-}
-
-int	ft_putnbr_u(unsigned int n)
-{
-	unsigned long	i;
-
-	i = n;
-	if ((i >= 0) && (i <= 9))
-	{
-		ft_putchar((i + '0'));
-	}
-	if (i > 9)
-	{
-		ft_putnbr_u((i / 10));
-		ft_putnbr_u((i % 10));
-	}
-	return (ft_len(n));
+	ft_putstr("0x");
+	return (ft_print_hexa_lower(p) + 2);
 }

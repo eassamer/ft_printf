@@ -6,15 +6,18 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:39 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/17 13:50:03 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/18 08:45:36 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
+
 static int ft_len(int n)
 {
 	int len;
 	len = 0;
+	if (!n)
+		return (1);
 	if (n < 0)
 	{
 		len++;
@@ -27,6 +30,7 @@ static int ft_len(int n)
 	}
 	return (len);
 }
+
 int	ft_putnbr(int n)
 {
 	long	i;

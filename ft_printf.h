@@ -5,13 +5,13 @@
 #include<stdlib.h>
 # include <stdarg.h>
 
-int ft_print_hexa(int hexa);
+unsigned int    ft_print_hexa_lower(unsigned long int hexa);
 int	ft_putchar(char c);
 int	ft_putnbr_u(unsigned int n);
 int	ft_putnbr(int n);
 int	ft_putstr(char *str);
-int    ft_print_hexa_u(int hexa);
+unsigned int    ft_print_hexa_upper(unsigned long hexa);
 int	ft_printf(const char *s, ...);
-int	write_f(char format, const void *v, int *len);
+int	ft_print_p(unsigned long int p);
 
 #endif
