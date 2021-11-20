@@ -6,7 +6,7 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:48 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/18 09:05:11 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:08:09 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstr(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (!str)

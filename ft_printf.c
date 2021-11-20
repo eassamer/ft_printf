@@ -6,12 +6,13 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:16:34 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/19 21:48:46 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:42:28 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 #include<stdio.h>
+
 static void	print_value(char format, const void *v, int *len)
 {
 	if (format == 'd' || format == 'i')
@@ -23,13 +24,13 @@ static void	print_value(char format, const void *v, int *len)
 	else if (format == 'c')
 		*len += ft_putchar((char)v);
 	else if (format == 'x')
-		*len += ft_print_hexa_lower((unsigned int)v);
+		ft_print_hexa_lower((unsigned int)v, len);
 	else if (format == 'X')
-		*len += ft_print_hexa_upper((unsigned int)v);
+		ft_print_hexa_upper((unsigned int)v, len);
 	else if (format == '%')
 		*len += ft_putchar('%');
 	else if (format == 'p')
-		*len = ft_print_p((unsigned long)v);
+		ft_print_p((unsigned long)v, len);
 }
 
 int	ft_printf(const char *format, ...)
@@ -57,9 +58,8 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
-int main ()
-{
-	int a;
-	//ft_printf("%d\n",ft_printf("%p;\n", &a));
-	ft_printf("%d\n",printf("%p;\n", -1));
-}
+// int main ()
+// {
+// 	ft_printf("%d\n",ft_printf(" %p ", 1));
+// 	printf("%d\n",printf(" %p ", 1));
+// }

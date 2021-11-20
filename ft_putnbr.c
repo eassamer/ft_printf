@@ -6,15 +6,16 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:39 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/18 08:45:36 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:23:19 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-static int ft_len(int n)
+static int	ft_len(int n)
 {
-	int len;
+	int	len;
+
 	len = 0;
 	if (!n)
 		return (1);

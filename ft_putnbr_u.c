@@ -6,19 +6,19 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:06:25 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/18 08:45:59 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:24:26 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-static int ft_len(unsigned int n)
+static int	ft_len(unsigned int n)
 {
-	int len;
-	
+	int	len;
+
 	len = 0;
 	if (!n)
-		return(1);
+		return (1);
 	while (n)
 	{
 		len++;

@@ -6,15 +6,15 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:10:06 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/19 21:45:59 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:41:25 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
 
-int	ft_print_p(unsigned long int p)
+void	ft_print_p(unsigned long p, int *len)
 {
-	
 	ft_putstr("0x");
-	return (ft_print_hexa_lower(p) + 2);
+	ft_print_hexa_lower(p, len);
+	(*len) += 2;
 }
