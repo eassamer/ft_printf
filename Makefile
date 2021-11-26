@@ -17,6 +17,8 @@ RM = rm -f
 
 AR = ar -rcs
 
+all : $(NAME)
+
 $(NAME) : $(OBJS)
 		$(AR) $(NAME) $(OBJS)
 
@@ -31,3 +33,6 @@ fclean : clean
 		$(RM) $(NAME)
 
 re : fclean all
+
+
+.PHONY : all clean fclean re

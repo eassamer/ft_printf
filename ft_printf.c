@@ -6,12 +6,12 @@
 /*   By: eassamer <eassamer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:16:34 by eassamer          #+#    #+#             */
-/*   Updated: 2021/11/20 16:42:28 by eassamer         ###   ########.fr       */
+/*   Updated: 2021/11/22 21:31:14 by eassamer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"ft_printf.h"
-#include<stdio.h>
+//#include<stdio.h>
 
 static void	print_value(char format, const void *v, int *len)
 {
@@ -57,9 +57,3 @@ int	ft_printf(const char *format, ...)
 	va_end(lst);
 	return (len);
 }
-
-// int main ()
-// {
-// 	ft_printf("%d\n",ft_printf(" %p ", 1));
-// 	printf("%d\n",printf(" %p ", 1));
-// }
